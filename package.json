@@ -6,7 +6,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "bootstrap": "npm install --prefix backend && npm install --prefix frontend"
+    "bootstrap": "npm install --prefix backend && npm install --prefix frontend",
+    "dev": "concurrently \"npm --workspace backend run start\" \"npm --workspace frontend run start\""
   },
   "workspaces": [
     "frontend",
@@ -15,5 +16,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs"
+  "type": "commonjs",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
 }
